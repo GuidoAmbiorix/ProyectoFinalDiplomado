@@ -42,23 +42,22 @@
 <main>
 
 
-  <div class="album py-5 bg-light">
-    <div class="container">
-
-      <div class="row">
-          <div class="col-12 col-lg-6">
+  <div class="album py-5 bg-light ">
+    <div class="container containerStyle ">
+      <div class="row box">
+          <div class="col-12 col-lg-12 ">
               <div class="card-body">
-                  <p class="card-text">
-                    <h5 class="card-title">Registro de gastos</h5>
-                    <form id="formulario-gastos">
-                        <div class="row mb-3">
-                          <label for="descripcion" class="col-12 col-sm-5 col-form-label">Razon del gasto</label>
+                  <p class="card-text mb-0">
+                    <h5 class="card-title text-center border p-3 mb-2 bgColor">Registro de gastos</h5>
+                    <form id="formulario-gastos" class="p-2  d-flex flex-column textColor" >
+                        <div class="row mb-3 ">
+                          <label for="descripcion" class="col-12 col-sm-5 col-form-label  w-100 text-center">Razon del gasto</label>
                           <div class="col-sm-12">
                               <textarea name="descripcion" id="descripcion" class="form-control" cols="30" rows="3" placeholder="Razon del gasto"></textarea>
                           </div>
                         </div>
-                        <div class="row mb-3">
-                            <div class="col-md-5">
+                        <div class="row mb-3  justify-content-center">
+                            <div class="col-md-5 text-center">
                                 <label for="categoria" class="form-label">Categoria</label>
                                 <select id="categoria" class="form-select">
                                   <option selected>Elige una categoria</option>
@@ -70,45 +69,41 @@
                               </div>
                         </div>
                         
-                        <div class="row mb-3">
-                            <div class="row mb-3">
-                                <label for="monto" class="col-sm-2 col-form-label">Monto</label>
-                                <div class="col-3 col-sm-3">
-                                    <input type="number" name="monto" id="monto" class="form-control" ></input>
-                                </div>
+                        
+                        <div class="row mb-3 w-100 ms-2 mt-2 text-center">
+                          <div class="row mb-3 ">
+                            <label for="monto" class="col-12 col-sm-5 col-form-label w-100 text-center">Monto</label>
+                            <div class="col-sm-12 ">
+                              <input type="number" name="monto" id="monto" class="form-control " ></input>
+                            </div>
+                          </div>
                             <div class="col-sm">
 
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="moneda" id="flexRadioDefault">
+                                    <input class="form-check-input" type="radio" name="moneda" id="flexRadioDefault" value="DOP" checked>
                                     <label class="form-check-label" for="moneda1">
                                      DOP
                                     </label>
                                   </div>
 
-
-                                  <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="moneda" id="flexRadioDefault" checked>
+                                    <input class="form-check-input" type="radio" name="moneda" id="flexRadioDefault" value="USD" >
                                     <label class="form-check-label" for="moneda2" >
-                                     DOP
+                                     USD
                                     </label>
-                                  </div>
 
                             </div>
-                            <div class="row mb-3">
-                                <label for="fecha" class="col-12 col-sm-5 col-form-label">fecha del gasto</label>
+                            <div class="row mb-3 mt-2 ">
+                                <label for="fecha" class="col-12 col-sm-5  w-100 col-form-label">Fecha del gasto</label>
                                 <div class="col-sm-12">
                                     <input type="date" name="fecha" id="fecha" ></input>
                                 </div>
-
-                        <div class = "col-5 m-3">
-                        <button type="submit" class="btn btn-primary">Guardar</button>
+                                <div class = "col-5 m-3 w-100">
+                                  <button type="submit" class="boton">Guardar</button>
+                              </div>
+                            </div>
                       </form>
 
-
-
-                  </p>
-
-              </div>
+             
           </div>
       </div>
         </div>

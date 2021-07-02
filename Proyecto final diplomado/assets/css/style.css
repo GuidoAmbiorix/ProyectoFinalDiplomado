@@ -1,3 +1,57 @@
+:root {
+    --white: #fff;
+    --black: #1c2b2d;
+    --blue: #31326f;
+    --light-blue: #005490;
+    --color-primary: #9d0191;
+    --color-sec: #db6400;
+    --grey: #eee;
+    --dark-grey: #222831;
+  }
+
 .navbar-nav  li a:hover {
     color:  #F8DC81 !important;
 }
+
+
+.containerStyle {
+    height: 100vh;
+    background-color: var(--grey);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .box {
+    background-color: var(--white);
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    width: 35rem;
+  }
+  
+  .bgColor{
+      background-color: #F8DC81;
+      color: #214151;
+  }
+
+  .textColor{
+    color: #214151;
+  }
+
+  
+ .boton{
+  background-color: #214151;
+  border: none;
+  outline: none;
+  color: var(--white);
+  padding: .5rem;
+  font-size: 1rem;
+  margin-top: 1rem;
+  border-radius: 3px;
+  cursor: pointer;
+ }
+
+   
+ .boton:hover{
+   color: #F8DC81;
+   }
