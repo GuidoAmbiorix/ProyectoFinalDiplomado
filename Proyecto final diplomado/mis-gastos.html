@@ -59,9 +59,9 @@
 
                 <div class="row mb-3  justify-content-center">
                   <div class="col-md-5 text-center">
-                    <label for="cuenta" class="form-label">Cuenta:</label>
-                    <select id="cuenta" class="form-select">
-                      <option selected>Tipo de cuenta</option>
+                    <label for="cuenta" class="form-label">Cuenta</label>
+                    <select id="cuenta" class="form-select" required>
+                      <option selected disabled value="">Tipo de cuenta</option>
                       <option value="Efectivo">Efectivo</option>
                       <option value="tarjeta">Tarjeta</option>
 
@@ -71,10 +71,9 @@
 
                 <div class="row mb-3  justify-content-center">
                   <div class="col-md-5 text-center">
-                    <label for="categoria" class="form-label validationServer04">Categoria</label>
-                    <select id="categoria validationServer04" class="form-select is-valid"  aria-describedby="validationServer04Feedback" required>
-                      
-                      <option selected >Elige una categoria</option>
+                    <label for="categoria" class="form-label ">Categoria</label>
+                    <select id="categoria " class="form-select"  required>  
+                      <option selected disabled value="" >Elige una categoria</option>
                       <option value="Personal">Personal</option>
                       <option value="Diversion">Diversion</option>
                       <option value="Transporte">Transporte</option>
@@ -115,13 +114,13 @@
                       gasto</label>
                     <div class="col-sm-12">
                       <textarea name="descripcion" id="descripcion" class="form-control" cols="30" rows="3"
-                        placeholder="Razon del gasto"></textarea>
+                        placeholder="Razon del gasto" required></textarea>
                     </div>
                   </div>
                   <div class="row mb-3 mt-2 ">
                     <label for="fecha" class="col-12 col-sm-5  w-100 col-form-label">Fecha del gasto</label>
                     <div class="col-sm-12">
-                      <input type="date" name="fecha" id="fecha"></input>
+                      <input type="date" name="fecha" id="fecha" required></input>
                     </div>
                     <div class="col-5 m-3 w-100">
                       <button type="submit" class="boton">Guardar</button>
