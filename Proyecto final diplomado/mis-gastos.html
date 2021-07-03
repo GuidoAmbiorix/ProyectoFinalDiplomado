@@ -55,6 +55,8 @@
               <p class="card-text mb-0">
               <h5 class="card-title text-center border p-3 mb-2 bgColor">Registro de gastos</h5>
               <form id="formulario-gastos" class="p-2  d-flex flex-column textColor">
+
+
                 <div class="row mb-3  justify-content-center">
                   <div class="col-md-5 text-center">
                     <label for="cuenta" class="form-label">Cuenta:</label>
@@ -69,23 +71,27 @@
 
                 <div class="row mb-3  justify-content-center">
                   <div class="col-md-5 text-center">
-                    <label for="categoria" class="form-label">Categoria</label>
-                    <select id="categoria" class="form-select">
-                      <option selected>Elige una categoria</option>
+                    <label for="categoria" class="form-label validationServer04">Categoria</label>
+                    <select id="categoria validationServer04" class="form-select is-valid"  aria-describedby="validationServer04Feedback" required>
+                      
+                      <option selected >Elige una categoria</option>
                       <option value="Personal">Personal</option>
                       <option value="Diversion">Diversion</option>
                       <option value="Transporte">Transporte</option>
                       <option value="Otros">Otros...</option>
                     </select>
+                    
                   </div>
                 </div>
 
 
                 <div class="row mb-3 w-100 ms-2 mt-2 text-center">
                   <div class="row mb-3 ">
-                    <label for="monto" class="col-12 col-sm-5 col-form-label w-100 text-center">Monto</label>
-                    <div class="col-sm-12 ">
-                      <input type="number" name="monto" id="monto" class="form-control "></input>
+                    <label for="monto validationCustom01"
+                      class="col-12 col-sm-5 col-form-label w-100 text-center">Monto</label>
+                    <div class="col-sm-12  ">
+                      <input type="number" name="monto" id="monto  validationCustom01" class="form-control "
+                        value="Mark" required></input>
                     </div>
                   </div>
                   <div class="col-sm">
@@ -121,6 +127,8 @@
                       <button type="submit" class="boton">Guardar</button>
                     </div>
                   </div>
+
+
               </form>
 
 
@@ -135,7 +143,7 @@
     <div class="text-center p-4"">
         © 2021 Copyright
       </div>
-     
+      
 </footer>
    
 
