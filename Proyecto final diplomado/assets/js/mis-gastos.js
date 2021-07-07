@@ -6,7 +6,7 @@ window.addEventListener('load', event => {
 
         let gasto = {
             descripcion: event.target.elements['descripcion'].value,
-            categoria: event.target.elements['categoria'].value,
+            categoria: event.target.elements['categoria'],
             fecha: event.target.elements['fecha'].value,
             monto: event.target.elements['monto'].value,
             moneda: event.target.elements['moneda'].value,
