@@ -34,7 +34,7 @@
               <a class="nav-link text-light" href="mis-gastos.html">Mis gastos</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-light" href="#">Categoria de gastos</a>
+              <a class="nav-link text-light" href="Categoria-Gastos.html ">Categoria de gastos</a>
             </li>
             <li class="nav-item">
               <a class="nav-link text-light" href="#">Mis tarjetas</a>
@@ -46,9 +46,8 @@
 
   <main>
 
-
     <div class="album py-5 bg-light ">
-      <div class="container containerStyle ">
+      <div class="container d-flex justify-content-center ">
         <div class="row box">
           <div class="col-12 col-lg-12 ">
             <div class="card-body">
@@ -56,38 +55,20 @@
               <h5 class="card-title text-center border p-3 mb-2 bgColor">Registro de gastos</h5>
               <form id="formulario-gastos" class="p-2  d-flex flex-column textColor">
 
-
-                <div class="row mb-3  justify-content-center">
-                  <div class="col-md-5 text-center">
-                    <label for="cuenta" class="form-label">Cuenta</label>
-                    <select id="cuenta" class="form-select" required>
-                      <option selected disabled value="">Tipo de cuenta</option>
-                      <option value="Efectivo">Efectivo</option>
-                      <option value="tarjeta">Tarjeta</option>
-
-                    </select>
-                  </div>
-                </div>
-
-                <div class="row mb-3  justify-content-center">
-                  <div class="col-md-5 text-center">
-                    <label for="categoria" class="form-label ">Categoria</label>
-                    <select id="categoria " class="form-select"  required>  
+                <div class="row mb-3  ">
+                  <div class="col-md-5  w-100">
+                    <label for="categoriasMisGastos" class="form-label">Categoria</label>
+                    <select id="categoriasMisGastos" class="form-select"  required>  
                       <option selected disabled value="" >Elige una categoria</option>
-                      <option value="Personal">Personal</option>
-                      <option value="Diversion">Diversion</option>
-                      <option value="Transporte">Transporte</option>
-                      <option value="Otros">Otros...</option>
                     </select>
                     
                   </div>
                 </div>
 
-
-                <div class="row mb-3 w-100 ms-2 mt-2 text-center">
+                <div class=" mb-3 w-15 ms-2 mt-2 ">
                   <div class="row mb-3 ">
                     <label for="monto validationCustom01"
-                      class="col-12 col-sm-5 col-form-label w-100 text-center">Monto</label>
+                      class="col-12 col-sm-5 col-form-label w-100 ">Monto</label>
                     <div class="col-sm-12  ">
                       <input type="number" name="monto" id="monto  validationCustom01" class="form-control " required></input>
                     </div>
@@ -95,21 +76,21 @@
                   <div class="col-sm">
 
                     <div class="form-check form-check-inline">
-                      <input class="form-check-input" type="radio" name="moneda" id="flexRadioDefault" value="DOP"
-                        checked>
+                      <input class="form-check-input" type="radio" name="moneda" id="moneda" value="DOP"
+                       >
                       <label class="form-check-label" for="moneda1">
                         DOP
                       </label>
                     </div>
 
-                    <input class="form-check-input" type="radio" name="moneda" id="flexRadioDefault" value="USD">
+                    <input class="form-check-input" type="radio" name="moneda" id="moneda" value="USD" checked>
                     <label class="form-check-label" for="moneda2">
                       USD
                     </label>
 
                   </div>
                   <div class="row mb-3 ">
-                    <label for="descripcion" class="col-12 col-sm-5 col-form-label  w-100 text-center">Razon del
+                    <label for="descripcion" class="col-12 col-sm-5 col-form-label  w-100 ">Razon del
                       gasto</label>
                     <div class="col-sm-12">
                       <textarea name="descripcion" id="descripcion" class="form-control" cols="30" rows="3"
