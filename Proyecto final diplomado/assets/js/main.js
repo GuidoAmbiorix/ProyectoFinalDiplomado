@@ -20,22 +20,28 @@ window.addEventListener('load', event =>{
 
      }
 
-    
+     //Aqui estaran las categorias por default
+    CrearCategoriasDefault = () =>{
       let categorias = [
-          'Personal',
-          'Diversion',
-          'Transporte'
-      ];
+        'Personal',
+        'Diversion',
+        'Transporte'
+    ];
 
+  //Si no hay nada en las categorias, actualizame la lista con las categorias por default
+  //Si ya estan las categorias por default pues no me actualices la lista    
+   if(localStorage.getItem('categorias') == null){
+
+     //Actualizo   
+     localStorage.setItem('categorias',JSON.stringify(categorias));
+
+    }
       
-  if(localStorage.getItem('categorias') == null){
+    }
+    
+     CrearCategoriasDefault(); 
 
-    //Actualizo   
-    localStorage.setItem('categorias',JSON.stringify(categorias));
- 
-   }
 
-  
 
       for(let i = 0; i < misGastos.length ;i++){
 
@@ -62,7 +68,7 @@ window.addEventListener('load', event =>{
 
   renderizarCategorias(); 
 
-    // Eventos para filtrar la lista de gastos
+    //Filtros por gastos gastos
 
     document.getElementById('monto').addEventListener('change', event => {
       let filtroMonto = event.target.value;
@@ -79,15 +85,20 @@ window.addEventListener('load', event =>{
               return false;
           }
       });
+       //Si es falso entonces no coinciden y quiero que me muestre todo
       if(misGastosFiltrados == false){
         listado.innerHTML = '';
         misGastos.forEach(renderizarGastos)
-      }else{
+      }
+       //Si es true entonces quiero que me muestre los datos que encuentre
+      else{
         listado.innerHTML = '';
         misGastosFiltrados.forEach(renderizarGastos);
       }
      
   });
+
+  //Filtro por categorias
 
   document.getElementById('categorias').addEventListener('change', event => {
       let filtroCategoria = event.target.value;
@@ -103,17 +114,21 @@ window.addEventListener('load', event =>{
           } else {
               return false;
           }
-      })
+      });
+      //Si es falso entonces no coinciden y quiero que me muestre todo
       if(misGastosFiltrados == false){
         listado.innerHTML = '';
         misGastos.forEach(renderizarGastos)
-      }else{
+      }
+      //Si es true entonces quiero que me muestre los datos que encuentre
+      else{
         listado.innerHTML = '';
         misGastosFiltrados.forEach(renderizarGastos);
       }
   });
 
   
+  //Filtro para las monedas
   
 let moneda = document.getElementsByName('moneda');
     
@@ -134,12 +149,14 @@ for(let i = 0 ;i<moneda.length;i++){
          return false;
         }
     });
-
+ //Si es falso entonces no coinciden y quiero que me muestre todo
     if( filtroChecked == false){
       listado.innerHTML = '';
       misGastos.forEach(renderizarGastos);
    
-  }else{
+  }
+   //Si es true entonces quiero que me muestre los datos que encuentre
+  else{
     listado.innerHTML = '';
     misGastosFiltrados.forEach(renderizarGastos);
     
