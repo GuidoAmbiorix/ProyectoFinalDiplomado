@@ -1,4 +1,3 @@
-
 //Agregar Nuevo Elemento
 //Obteniendo el formulario para aplicarle un evento
 const NuevoFormularioCategorias = document.getElementById("AgregarCategorias");
