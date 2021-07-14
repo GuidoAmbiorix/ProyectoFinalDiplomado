@@ -31,7 +31,6 @@ window.addEventListener('load', event =>{
   //Si no hay nada en las categorias, actualizame la lista con las categorias por default
   //Si ya estan las categorias por default pues no me actualices la lista    
    if(localStorage.getItem('categorias') == null){
-
      //Actualizo   
      localStorage.setItem('categorias',JSON.stringify(categorias));
 
@@ -129,7 +128,6 @@ window.addEventListener('load', event =>{
 
   
   //Filtro para las monedas
-  
 let moneda = document.getElementsByName('moneda');
     
 for(let i = 0 ;i<moneda.length;i++){
@@ -149,6 +147,7 @@ for(let i = 0 ;i<moneda.length;i++){
          return false;
         }
     });
+
  //Si es falso entonces no coinciden y quiero que me muestre todo
     if( filtroChecked == false){
       listado.innerHTML = '';
